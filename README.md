@@ -24,8 +24,8 @@ http://xevinbox.github.io/treemenu.js/
 
 ````
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function(){
             $("ul.mytree").treemenu();
         });
-   </script>
+    </script>
 ````
