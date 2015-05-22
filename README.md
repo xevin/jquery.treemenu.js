@@ -3,7 +3,7 @@ treeMenu - simple jQuery plugin. Add togglers to ul > li > *  structure
 
 ## Example
 
-http://xevinbox.github.io/treemenu.js/example.html
+http://xevinbox.github.io/treemenu.js/
 
 ## Usage
 
@@ -24,8 +24,8 @@ http://xevinbox.github.io/treemenu.js/example.html
 
 ````
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function(){
             $("ul.mytree").treemenu();
         });
-   </script>
+    </script>
 ````
