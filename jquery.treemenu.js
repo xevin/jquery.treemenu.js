@@ -35,6 +35,7 @@
         options.openActive = options.openActive || false;
         options.activeSelector = options.activeSelector || "";
 
+        this.addClass("treemenu");
         this.find("> li").each(function() {
             e = $(this);
             var subtree = e.find('> ul');
