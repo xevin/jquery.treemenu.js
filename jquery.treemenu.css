@@ -1,28 +1,17 @@
 /* For treemenu.js */
 
-.treemenu li {list-style: none;}
+.treemenu li { list-style: none; }
 
-.toggler {
-    width: 1em;
-    height: 1em;
-    display: inline-block;
-    cursor: default;
-    font-size: 0.8em;
-    text-align: center;
-    padding: 0.1em;
-    margin-left: -1.4em;
-    margin-right: 0.6em;
-    border: 0.1em solid transparent;
-    border-radius: 50%;
-}
-
-li.tree-opened > .toggler:hover,
-li.tree-closed > .toggler:hover {
-    border-color: #aaa;
+.treemenu .toggler {
     cursor: pointer;
 }
 
+.treemenu .toggler:before {
+    display: inline-block;
+    margin-right: 2pt;
+}
+
 li.tree-empty > .toggler { color: #aaa; }
-li.tree-empty > span.toggler:before { content: "\2212"; }
-li.tree-closed > span.toggler:before { content: "+"; }
-li.tree-opened > span.toggler:before { content: "\2212"; }
+li.tree-empty > .toggler:before { content: "\2212"; }
+li.tree-closed > .toggler:before { content: "+"; }
+li.tree-opened > .toggler:before { content: "\2212"; }

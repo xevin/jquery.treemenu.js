@@ -1,7 +1,7 @@
 /*
  treeMenu - jQuery plugin
  version: 0.4
- 
+
  Copyright 2014 Stepan Krapivin
 
 */
@@ -39,20 +39,27 @@
         this.find("> li").each(function() {
             e = $(this);
             var subtree = e.find('> ul');
-            var toggler = $('<span>');
-            toggler.addClass('toggler');
+            var button = e.find('span').eq(0).addClass('toggler');
 
-            e.prepend(toggler);
+            if( button.length == 0) {
+                var button = $('<span>');
+                button.addClass('toggler');
+                e.prepend(button);
+            } else {
+                button.addClass('toggler');
+            }
+
             if(subtree.length > 0) {
                 subtree.hide();
 
                 e.addClass('tree-closed');
 
-                e.find(toggler).click(function() {
+                e.find(button).click(function() {
                     var li = $(this).parent('li');
                     li.find('> ul').toggle(options.delay);
                     li.toggleClass('tree-opened');
                     li.toggleClass('tree-closed');
+                    li.toggleClass(options.activeSelector);
                 });
 
                 $(this).find('> ul').treemenu(options);
