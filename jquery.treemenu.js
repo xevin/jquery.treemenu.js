@@ -56,7 +56,7 @@
 
                 e.find(button).click(function() {
                     var li = $(this).parent('li');
-                    li.find('> ul').toggle(options.delay);
+                    li.find('> ul').slideToggle(options.delay);
                     li.toggleClass('tree-opened');
                     li.toggleClass('tree-closed');
                     li.toggleClass(options.activeSelector);
