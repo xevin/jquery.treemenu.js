@@ -29,10 +29,33 @@
         return this;
     }
 
+    $.fn.openActive = function(activeSel) {
+        activeSel = activeSel || ".active";
+
+        var c = this.attr("class");
+
+        this.find(activeSel).each(function(){
+            var el = $(this).parent();
+            while (el.attr("class") !== c) {
+                if(el.prop("tagName") === 'UL') {
+                    el.show();
+                } else if (el.prop("tagName") === 'LI') {
+                    el.removeClass('tree-closed');
+                    el.addClass("tree-opened");
+                }
+
+                el = el.parent();
+            }
+        });
+
+        return this;
+    }
+
     $.fn.treemenu = function(options) {
         options = options || {};
         options.delay = options.delay || 0;
         options.openActive = options.openActive || false;
+        options.closeOther = options.closeOther || false;
         options.activeSelector = options.activeSelector || "";
 
         this.addClass("treemenu");
@@ -56,6 +79,15 @@
 
                 e.find(button).click(function() {
                     var li = $(this).parent('li');
+
+                    if (options.closeOther) {
+                        var siblings = li.parent('ul').find("li");
+                        siblings.removeClass("tree-opened");
+                        siblings.addClass("tree-closed");
+                        siblings.removeClass(options.activeSelector);
+                        siblings.find('> ul').slideUp(options.delay);
+                    }
+
                     li.find('> ul').slideToggle(options.delay);
                     li.toggleClass('tree-opened');
                     li.toggleClass('tree-closed');
