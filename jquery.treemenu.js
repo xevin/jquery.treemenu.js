@@ -80,7 +80,7 @@
                 e.find(button).click(function() {
                     var li = $(this).parent('li');
 
-                    if (options.closeOther) {
+                    if (options.closeOther && li.hasClass('tree-closed')) {
                         var siblings = li.parent('ul').find("li");
                         siblings.removeClass("tree-opened");
                         siblings.addClass("tree-closed");
