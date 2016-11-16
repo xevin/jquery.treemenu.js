@@ -29,28 +29,6 @@
         return this;
     }
 
-    $.fn.openActive = function(activeSel) {
-        activeSel = activeSel || ".active";
-
-        var c = this.attr("class");
-
-        this.find(activeSel).each(function(){
-            var el = $(this).parent();
-            while (el.attr("class") !== c) {
-                if(el.prop("tagName") === 'UL') {
-                    el.show();
-                } else if (el.prop("tagName") === 'LI') {
-                    el.removeClass('tree-closed');
-                    el.addClass("tree-opened");
-                }
-
-                el = el.parent();
-            }
-        });
-
-        return this;
-    }
-
     $.fn.treemenu = function(options) {
         options = options || {};
         options.delay = options.delay || 0;
