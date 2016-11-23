@@ -68,7 +68,7 @@
                     var li = $(this).parent('li');
 
                     if (options.closeOther && li.hasClass('tree-closed')) {
-                        var siblings = li.parent('ul').find("li");
+                        var siblings = li.parent('ul').find("li:not(.tree-empty)");
                         siblings.removeClass("tree-opened");
                         siblings.addClass("tree-closed");
                         siblings.removeClass(options.activeSelector);
