@@ -15,11 +15,13 @@
         this.find(activeSel).each(function(){
             var el = $(this).parent();
             while (el.attr("class") !== c) {
+                el.find('> ul').show();
                 if(el.prop("tagName") === 'UL') {
                     el.show();
                 } else if (el.prop("tagName") === 'LI') {
                     el.removeClass('tree-closed');
                     el.addClass("tree-opened");
+                    el.show();
                 }
 
                 el = el.parent();
