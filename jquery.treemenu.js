@@ -42,14 +42,13 @@
         this.find("> li").each(function() {
             e = $(this);
             var subtree = e.find('> ul');
-            var button = e.find('span').eq(0).addClass('toggler');
+            var button = e.find('.toggler').eq(0);
 
-            if( button.length == 0) {
+            if(button.length == 0) {
+                // create toggler
                 var button = $('<span>');
                 button.addClass('toggler');
                 e.prepend(button);
-            } else {
-                button.addClass('toggler');
             }
 
             if(subtree.length > 0) {
