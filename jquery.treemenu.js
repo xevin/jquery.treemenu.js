@@ -1,6 +1,6 @@
 /*
  treeMenu - jQuery plugin
- version: 0.4
+ version: 0.4.2
 
  Copyright 2014 Stepan Krapivin
 
@@ -14,6 +14,7 @@
 
         this.find(activeSel).each(function(){
             var el = $(this).parent();
+
             while (el.attr("class") !== c) {
                 el.find('> ul').show();
                 if(el.prop("tagName") === 'UL') {
@@ -39,6 +40,13 @@
         options.activeSelector = options.activeSelector || "";
 
         this.addClass("treemenu");
+
+        if (!options.nonroot) {
+            this.addClass("treemenu-root");
+        }
+
+        options.nonroot = true;
+
         this.find("> li").each(function() {
             e = $(this);
             var subtree = e.find('> ul');
