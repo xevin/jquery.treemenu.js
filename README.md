@@ -50,15 +50,16 @@ http://xevinbox.github.io/treemenu.js/
 
 ## Options
   * delay - open/close animation delay. Default == **0**
-  * ~~openActive - open all trees that contains element with *activeSelector* class. Default == **false**~~
-    * use .openActive() function
-      ````
-      $("ul.mytree").treemenu().openActive();
-      ````
+  * openActive - open all trees that contains element with *activeSelector* class. Default == **false**
   * closeOther - at opening some tree, the other will be closed. Default == **false**
-  * activeSelector - class name for active elements. Default == **''**
+  * activeSelector - class selector name for active elements. Default == **'.active'**
 
 Use options:
   ````
-  $("ul.mytree").treemenu({'delay': 300, 'closeOther': true, 'activeSelector': 'active'}).openActive();
+  $("ul.mytree").treemenu({
+    'delay': 300,
+    'closeOther': true,
+    'activeSelector': 'active',
+    'openActive': true
+  });
   ````
