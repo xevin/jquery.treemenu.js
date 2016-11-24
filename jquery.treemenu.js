@@ -1,43 +1,17 @@
 /*
  treeMenu - jQuery plugin
- version: 0.4.2
+ version: 0.6
 
  Copyright 2014 Stepan Krapivin
 
 */
-
 (function($){
-    $.fn.openActive = function(activeSel) {
-        activeSel = activeSel || ".active";
-
-        var c = this.attr("class");
-
-        this.find(activeSel).each(function(){
-            var el = $(this).parent();
-
-            while (el.attr("class") !== c) {
-                el.find('> ul').show();
-                if(el.prop("tagName") === 'UL') {
-                    el.show();
-                } else if (el.prop("tagName") === 'LI') {
-                    el.removeClass('tree-closed');
-                    el.addClass("tree-opened");
-                    el.show();
-                }
-
-                el = el.parent();
-            }
-        });
-
-        return this;
-    }
-
     $.fn.treemenu = function(options) {
         options = options || {};
         options.delay = options.delay || 0;
         options.openActive = options.openActive || false;
         options.closeOther = options.closeOther || false;
-        options.activeSelector = options.activeSelector || "";
+        options.activeSelector = options.activeSelector || ".active";
 
         this.addClass("treemenu");
 
@@ -88,7 +62,24 @@
         });
 
         if (options.openActive) {
-            this.openActive(options.activeSelector);
+            var cls = this.attr("class");
+
+            this.find(options.activeSelector).each(function(){
+                var el = $(this).parent();
+
+                while (el.attr("class") !== cls) {
+                    el.find('> ul').show();
+                    if(el.prop("tagName") === 'UL') {
+                        el.show();
+                    } else if (el.prop("tagName") === 'LI') {
+                        el.removeClass('tree-closed');
+                        el.addClass("tree-opened");
+                        el.show();
+                    }
+
+                    el = el.parent();
+                }
+            });
         }
 
         return this;
