@@ -59,7 +59,7 @@ Use options:
   $("ul.mytree").treemenu({
     'delay': 300,
     'closeOther': true,
-    'activeSelector': 'active',
+    'activeSelector': '.active',
     'openActive': true
   });
   ````
