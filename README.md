@@ -5,6 +5,15 @@ treeMenu - simple jQuery plugin. Add togglers to ul > li > *  structure
 
 http://xevinbox.github.io/treemenu.js/
 
+## Install
+
+Download *jquery.treemenu.js* and *jquery.treemenu.css* files
+
+or do
+````
+bower install treemenu.js
+````
+
 ## Usage
 
 1. include jQuery
