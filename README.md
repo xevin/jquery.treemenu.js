@@ -9,7 +9,7 @@ http://xevinbox.github.io/treemenu.js/
 
 Download *jquery.treemenu.js* and *jquery.treemenu.css* files
 
-or do
+or install via bower
 ````
 bower install treemenu.js
 ````
@@ -17,18 +17,18 @@ bower install treemenu.js
 ## Usage
 
 1. include jQuery
-  ````
+  ````html
     <script src="jquery.min.js" type="text/javascript"></script>
   ````
 
 2. include treeMenu script and styles in your document
-  ````
+  ````html
     <script src="jquery.treemenu.js" type="text/javascript"></script>
     <link href="jquery.treemenu.css" rel="stylesheet" type="text/css">
   ````
 
 3. Create tree
-  ````
+  ````html
   <ul class="mytree">
       <li><a href="/transport/">Transport</a>
           <ul>
@@ -49,12 +49,10 @@ bower install treemenu.js
   ````
 
 3. Attach treeMenu when the document is loaded
-  ````
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $("ul.mytree").treemenu();
-        });
-    </script>
+  ````javascript
+    $(document).ready(function(){
+        $("ul.mytree").treemenu();
+    });
   ````
 
 ## Options
@@ -64,7 +62,7 @@ bower install treemenu.js
   * activeSelector - class selector name for active elements. Default == **'.active'**
 
 Use options:
-  ````
+  ````javascript
   $("ul.mytree").treemenu({
     'delay': 300,
     'closeOther': true,
