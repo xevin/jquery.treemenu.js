@@ -1,4 +1,4 @@
-/* For treemenu.js */
+/* For jquery.treemenu.js */
 .treemenu li { list-style: none; }
 .treemenu .toggler { cursor: pointer; }
 .treemenu .toggler:before { display: inline-block; margin-right: 2pt; }

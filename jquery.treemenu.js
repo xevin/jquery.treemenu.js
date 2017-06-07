@@ -5,7 +5,7 @@
  Copyright 2014 Stepan Krapivin
 
 */
-(function($){
+(function($) {
     $.fn.treemenu = function(options) {
         options = options || {};
         options.delay = options.delay || 0;
@@ -26,16 +26,15 @@
             var subtree = e.find('> ul');
             var button = e.find('.toggler').eq(0);
 
-            if(button.length == 0) {
+            if (button.length == 0) {
                 // create toggler
                 var button = $('<span>');
                 button.addClass('toggler');
                 e.prepend(button);
             }
 
-            if(subtree.length > 0) {
+            if (subtree.length > 0) {
                 subtree.hide();
-
                 e.addClass('tree-closed');
 
                 e.find(button).click(function() {
