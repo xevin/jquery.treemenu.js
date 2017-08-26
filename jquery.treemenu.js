@@ -11,7 +11,7 @@
         options.delay = options.delay || 0;
         options.openActive = options.openActive || false;
         options.closeOther = options.closeOther || false;
-        options.activeSelector = options.activeSelector || ".active";
+        options.activeSelector = options.activeSelector || "active";
 
         this.addClass("treemenu");
 
