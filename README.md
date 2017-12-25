@@ -1,15 +1,30 @@
-# treemenu.js
+# jquery.treemenu.js
 treeMenu - simple jQuery plugin. Add togglers to ul > li > *  structure
 
 ## Example
 
 https://xevin.ru/treemenu-js-examples/
 
-## Install
+## Installation
 
 Download *jquery.treemenu.js* and *jquery.treemenu.css* files
 
-or install via bower
+or
+
+install via **yarn**
+
+````
+yarn add  jquery.treemenu.js
+````
+
+install via **npm**
+
+````
+npm install jquery.treemenu.js
+````
+
+install via **bower**
+
 ````
 bower install treemenu.js
 ````
