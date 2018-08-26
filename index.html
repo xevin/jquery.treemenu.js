@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test Treemenu jquery plugin</title>
+    <link rel="stylesheet" href="jquery.treemenu.css">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="jquery.treemenu.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("ul.mytree").treemenu({openActive: true});
+    });
+    </script>
+</head>
+<body>
+    <ul class="mytree">
+        <li><a href="/transport/">Transport</a>
+            <ul>
+                <li><a href="/transport/hovertanks">Hover tanks</a></li>
+                <li><a href="/transport/quadbikes">Quad bikes</a></li>
+                <li><a href="/transport/ecars">Electro cars</a></li>
+            </ul>
+        </li>
+        <li><a href="/weapons/">Weapons</a>
+            <ul>
+                <li><a class="active" href="/weapons/knives">Knives</a></li>
+                <li><a href="/weapons/grenades">Grenades</a></li>
+                <li><a href="/weapons/lasers">Lasers</a></li>
+            </ul>
+        </li>
+        <li><a href="/suits/">Suits</a></li>
+    </ul>
+</body>
+</html>
