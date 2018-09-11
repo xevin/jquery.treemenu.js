@@ -1,11 +1,14 @@
 {
   "name": "jquery.treemenu.js",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "Treemenu.js is a simple jQuery plugin that recursively adds togglers to ul>li elements",
   "main": "jquery.treemenu.js",
   "repository": "git@github.com:xevin/jquery.treemenu.js.git",
   "author": "Stepan Krapivin <xevinbox@yandex.ru>",
   "license": "MIT",
+  "scripts": {
+    "build": "node_modules/uglify-js/bin/uglifyjs -c -m -- jquery.treemenu.js > jquery.treemenu.min.js"
+  },
   "keywords": [
     "treemenu",
     "tree",
@@ -21,5 +24,8 @@
   ],
   "dependencies": {
     "jquery": ">=1.11"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.4.9"
   }
 }
