@@ -7,7 +7,7 @@
   "author": "Stepan Krapivin <xevinbox@yandex.ru>",
   "license": "MIT",
   "scripts": {
-    "build": "node_modules/uglify-js/bin/uglifyjs -c -m -- jquery.treemenu.js > jquery.treemenu.min.js"
+    "build": "uglifyjs -c -m -- jquery.treemenu.js > jquery.treemenu.min.js"
   },
   "keywords": [
     "treemenu",
