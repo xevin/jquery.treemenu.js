@@ -1,6 +1,6 @@
 /*
  treeMenu - jQuery plugin
- version: 0.6
+ version: 0.6.2
 
  Copyright 2014 Stepan Krapivin
 
